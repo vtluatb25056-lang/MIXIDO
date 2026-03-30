@@ -3,80 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang cá nhân của tôi</title>
+    <title>Portfolio Cá Nhân</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            background-color: #f4f4f4;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #333;
+        }
+
         header {
-            background: #4CAF50;
+            text-align: center;
+            padding: 60px 20px;
             color: white;
+        }
+
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
             padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #764ba2;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #eee;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .project {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 10px;
             text-align: center;
         }
-        section {
-            padding: 20px;
-            margin: 10px;
-            background: white;
+
+        .project img {
+            width: 100%;
             border-radius: 10px;
+            margin-bottom: 10px;
         }
-        img {
-            width: 150px;
-            border-radius: 50%;
-        }
+
         .contact a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #764ba2;
             text-decoration: none;
-            color: #4CAF50;
+            font-weight: 500;
         }
+
         footer {
             text-align: center;
-            padding: 10px;
-            background: #333;
+            padding: 20px;
             color: white;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
+    <!-- ẢNH ĐẠI DIỆN -->
+    <img src="avatar.jpg" alt="Avatar">
+
     <h1>Nguyễn Văn A</h1>
-    <p>Web Developer | Designer | Freelancer</p>
+    <p>Lập trình viên Web | Freelancer | Designer</p>
 </header>
 
-<section>
-    <h2>Giới thiệu</h2>
-    <img src="avatar.jpg" alt="Ảnh đại diện">
-    <p>Xin chào! Tôi là Nguyễn Văn A, một lập trình viên web với đam mê thiết kế và công nghệ.</p>
-</section>
+<div class="container">
 
-<section>
-    <h2>Kỹ năng</h2>
-    <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>ReactJS</li>
-        <li>UI/UX Design</li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>👋 Giới thiệu</h2>
+        <p>
+            Xin chào! Tôi là Nguyễn Văn A, đam mê lập trình và thiết kế website.
+            Tôi thích tạo ra những sản phẩm đẹp, thân thiện với người dùng và tối ưu hiệu năng.
+        </p>
+    </div>
 
-<section>
-    <h2>Dự án</h2>
-    <ul>
-        <li>Website bán hàng</li>
-        <li>Ứng dụng quản lý công việc</li>
-        <li>Blog cá nhân</li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>💡 Kỹ năng</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>ReactJS</span>
+            <span>UI/UX</span>
+        </div>
+    </div>
 
-<section class="contact">
-    <h2>Liên hệ</h2>
-    <p>Email: example@gmail.com</p>
-    <p>Facebook: <a href="#">facebook.com/yourname</a></p>
-</section>
+    <div class="card">
+        <h2>🚀 Dự án</h2>
+        <div class="projects">
+
+            <div class="project">
+                <!-- ẢNH DỰ ÁN -->
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Website bán hàng</h3>
+                <p>Thiết kế giao diện và chức năng đặt hàng online.</p>
+            </div>
+
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>App quản lý</h3>
+                <p>Ứng dụng quản lý công việc cá nhân.</p>
+            </div>
+
+            <div class="project">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Blog cá nhân</h3>
+                <p>Chia sẻ kiến thức lập trình.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card contact">
+        <h2>📞 Liên hệ</h2>
+        <p>Email: example@gmail.com</p>
+        <a href="#">Facebook</a>
+        <a href="#">GitHub</a>
+    </div>
+
+</div>
 
 <footer>
-    <p>© 2026 - Trang cá nhân của tôi</p>
+    <p>© 2026 - Portfolio của tôi</p>
 </footer>
 
 </body>
